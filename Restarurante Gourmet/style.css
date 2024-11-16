@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+h1 {
+    margin-right: 300px;
+}
+
+.menuD {
+    margin: 70px; 
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu > div > article {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(252, 227, 231);
+}
+
+img {
+    width: 100%;
+    height: 100px;
+}
+
+.menu > div {
+    display: flex;
+}
+
+.navbar {
+    background-color: #333;
+    width: 100%; 
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav {
+    background-color: #333; 
+    padding: 10px 0; 
+}
+
+nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: rgb(247, 203, 123);
+    color: white;
+    font-size: 18px; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color: #555; 
+    color: rgb(243, 210, 66);
+    border-radius: 5px; 
+}
+
+.container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(fondoComida.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    padding: 0px; 
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.conocenos {
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f8e112;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+
+.conocenos:hover {
+    background-color: rgb(252, 194, 36);
+}
+
+.conocenos:active {
+    background-color: white;
+}
+
+#enviar {
+    display: none;
+}
+
+.campoNombre {
+    padding: 7px 30px;
+}
+
+.campoEdad {
+    padding: 7px 30px;
+}
+
+.campoCédula {
+    padding: 7px 30px;
+}
+
+.campoPedido {
+    padding: 7px 30px;
+}
+
+.campoCantidad {
+    padding: 7px 30px;
+}
+
+.campoDirección {
+    padding: 7px 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 400px;
+    height: 570px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 10px rgba(172, 162, 162, 0.5);
+}
+
+input {
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+#btn {
+    padding: 10px 30px;
+    margin: 30px;
+    border-radius: 3px;
+    background-color: rgb(50, 133, 50);
+    box-shadow: rgb(12, 10, 10) 2px 3px 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+#btn:hover {
+    background-color: rgb(33, 75, 33);
+}
+
+#btn:active {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
+
+.main {
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+}
+
+.main > p {
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    width: 400px;
+}
+
+.main > h4 {
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    width: 400px;
+}

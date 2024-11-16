@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Gourmet</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <h1>Restaurante Gourmet</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="login">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="signup">Menú</a>
+                </li>
+                <li>
+                    <a href="#" class="signup">Reservaciones</a>
+                </li>
+                <li>
+                    <a href="#" class="signup">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h2>Bienvenido a nuestro Restaurante</h2>
+        <p>Disfruta de la mejor experiencia gastronómica en un ambiente elegante y acogedor.</p>
+        <button class="conocenos">Conócenos</button>
+    </section>
+    <main>
+
+
+
+        <section class="menu">
+            <h2 class="menuD">Menú Destacado</h2>
+            
+            <div>
+                <article>
+                    <img src="receta-pasta-al-pesto.jpg" alt="">
+                    <br>
+                    <h3>Pasta al Pesto</h3>
+                    <br>
+                    <p>Descripción breve del plato:</p>
+                    <br>
+                    <ul>
+                        <li>Ingrediente 1</li>
+                        <li>Ingrediente 2</li>
+                        <li>Ingrediente 3</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <img src="magret.avif" alt="">
+                    <br>
+                    <h3>Magret de Pavo</h3>
+                    <br>
+                    <p>Descripción breve del plato:</p>
+                    <br>
+                    <ul>
+                        <li>Ingrediente 1</li>
+                        <li>Ingrediente 2</li>
+                        <li>Ingrediente 3</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <img src="Tartiflette.webp" alt="">
+                    <br>
+                    <h3>Tartiflette</h3>
+                    <br>
+                    <p>Descripción breve del plato:</p>
+                    <br>
+                    <ul>
+                        <li>Ingrediente 1</li>
+                        <li>Ingrediente 2</li>
+                        <li>Ingrediente 3</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <img src="risotto.webp" alt="">
+                    <br>
+                    <h3>Risotto</h3>
+                    <br>
+                    <p>Descripción breve del plato:</p>
+                    <br>
+                    <ul>
+                        <li>Ingrediente 1</li>
+                        <li>Ingrediente 2</li>
+                        <li>Ingrediente 3</li>
+                    </ul>
+                </article>
+            </div>
+
+        </section>
+
+
+        <section class="main">
+
+            <h4>Realiza tu Pedido</h4>
+            <p>Completa el formulario a continuación para realizar un pedido:</p>
+
+            <form id="registroForm" onsubmit="mostrarNombre(event)">
+                <label>
+                    Nombre:
+                    <br>
+                    <input type="text" class="campoNombre" id="campoNombre" required>
+                </label>
+
+                <label>
+                    Edad:
+                    <br>
+                    <input type="number" class="campoEdad" id="campoEdad" required>
+                </label>
+
+                <label>
+                    Cédula:
+                    <br>
+                    <input type="number" class="campoCédula" id="campoCedula" required>
+                </label>
+
+                <label>
+                    Pedido:
+                    <br>
+                    <input type="text" class="campoPedido" id="campoPedido" required>
+                </label>
+
+                <label>
+                    Cantidad:
+                    <br>
+                    <input type="number" class="campoCantidad" id="campoCantidad" required>
+                </label>
+
+                <label>
+                    Dirección:
+                    <br>
+                    <input type="text" class="campoDirección" id="campoDireccion" required>
+                </label>
+
+                <button type="submit" id="btn">Enviar Pedido</button>
+            </form>
+        </section>
+
+
+    </main>
+
+<script src="./script.js"></script>
+</body>
+
+</html>
