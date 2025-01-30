@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --color-boton: red;
+    --levitar-var: 0; 
+    --fruit-dir: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lexend Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+h1 {
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-botones {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#vistas {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    display: flex;
+    transition: left 0.5s ease;
+}
+
+#vistas section {
+    width: 100vw;
+    height: 100vh;
+}
+
+#vistas section h2 {
+    color: white;
+    font-size: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: bottom 0.3s ease;
+}
+
+#vistas .fruits {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#vistas .fruits span {
+    position: absolute;
+    transition: 0.3s;
+    animation-composition: accumulate;
+    animation: levitarX calc(2s * var(--levitar-var) ) ease-in-out infinite alternate both, levitarY calc(2s * var(--levitar-var) ) ease-in-out 500ms infinite alternate both; 
+}
+
+#vistas .fruits span img {
+    width: 100%;
+    opacity: 0;
+}
+
+#vistas .fruits span::after {
+    content: "";
+    display: flex;
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    left: 10%;
+    background: linear-gradient(to right, transparent, black, transparent);
+    filter: blur(8px);
+    transition: bottom 0.3s ease;
+    opacity: 0;
+}
+
+#vistas .fruits span:nth-child(1) {
+    width: 40vh;
+    left: 5vh;
+    bottom: 5vh;
+    filter: blur();
+    --levitar-var: 3;
+    --fruit-dir: 1;
+}
+
+#vistas .fruits span:nth-child(2) {
+    width: 25vh;
+    top: 10vh;
+    left: 15vw;
+    --levitar-var: 4;
+    --fruit-dir: -1;
+}
+
+#vistas .fruits span:nth-child(3) {
+    top: 10vh;
+    width: 15vh;
+    right: 25vh;
+    --levitar-var: 1;
+    --fruit-dir: -1;
+}
+
+#vistas .fruits span:nth-child(4) {
+    bottom: 5vh;
+    width: 35vh;
+    right: 5vh;
+    --levitar-var: 2;
+    --fruit-dir: 1;
+}
+
+.lata {
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    mask-image: url(./lata.svg);
+    mask-size: cover;
+}
+
+.lata img {
+    height: 100%;
+}
+
+.lata img[alt="Etiquetas"] {
+    transition: left 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    mix-blend-mode: multiply;
+}
+
+.show-all h2 {
+    animation: mostrar-texto 0.5s ease both;
+}
+
+.hide-all h2 {
+    animation: ocultar-texto 0.5s ease both;
+}
+
+.show-all .fruits img {
+    animation: mostrar-frutas 0.5s ease both;
+}
+
+.hide-all .fruits img {
+    animation: ocultar-frutas 0.5s ease both;
+}
+
+.show-all .fruits span::after {
+    animation: mostrar-frutas 0.5s ease both;
+}
+
+.hide-all .fruits span::after {
+    animation: ocultar-frutas 0.5s ease both;
+}
+
+@keyframes gota {
+    from{
+        box-shadow: 0 0 0 0px white;
+    }
+    to{
+        box-shadow: 0 0 0 20px transparent;
+    }
+}
+
+@keyframes mostrar-texto {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ocultar-texto {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+@keyframes mostrar-frutas {
+    from {
+        opacity: 0;
+        transform: translateY( calc( 100vh * var(--fruit-dir) ) );
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ocultar-frutas {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY( calc( 100vh * var(--fruit-dir) ) );
+    }
+}
+
+@keyframes levitarX {
+    from {
+        transform: translateX( calc( -1vh * var(--levitar-var) ) );
+    }
+    to {
+        transform: translateX( calc( 1vh * var(--levitar-var) ) );
+    }
+}
+
+@keyframes levitarY {
+    from {
+        transform: translateY( calc( -1vh * var(--levitar-var) ) );
+    }
+    to {
+        transform: translateY( calc( -100vh * var(--levitar-var) ) );
+    }
+}
+
+#contenedor-botones button {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    animation: gota 2s ease infinite; 
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+    h1 {
+        font-size: 5vh;
+    }
+    #vistas section h2 {
+        top: 30%;
+    }
+    .lata {
+        bottom: 9%;
+    }
+    #vistas .fruits span:nth-child(1) {
+        left: 0;
+    }
+    #vistas .fruits span:nth-child(2) {
+        left: 5vw;
+    }
+    #vistas .fruits span:nth-child(3) {
+        right: 5vw;
+        top: 5vh;
+    }
+    #vistas .fruits span:nth-child(4) {
+        bottom: 30vh;
+    }
+} 
