@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <form id="registroForm" onsubmit="mostrarNombre()">
+        <h1>Registro</h1>
+
+
+        <label>
+            Nombre:
+            <br>
+            <input type="text" class="campoNombre" id="campoNombre" required>
+            <!-- <input type="submit" id="Nombre"> -->
+        </label>
+        <label>
+            Apellido:
+            <br>
+            <input type="text" class="campoApellido" id="campoApellido" required>
+            <!-- <input type="submit" id="Apellido"> -->
+        </label>
+        <label>
+            Nombre de Usuario:
+            <br>
+            <input type="text" class="campoUser" id="campoUser" required>
+            <!-- <input type="submit" id="User"> -->
+        </label>
+        <label>
+            Correo Electrónico:
+            <br>
+            <input type="email" class="campoEmail" id="campoEmail" required>
+            <!-- <input type="email" id="Email"> -->
+        </label>
+        <label>
+            Contraseña:
+            <br>
+            <input type="password" class="campoContraseña" id="campoContraseña" required>
+            <!-- <input type="submit" id="Contraseña"> -->
+        </label>
+
+        <label> <input type="checkbox" class="terminos" required> Acepto los términos, condiciones y políticas.
+           
+            <!-- <input type="submit" id="Enviar"> -->
+            
+        </label>
+
+        <button type="submit" id="btn">Iniciar Sesion</button>
+    </form>
+    <script src="../js/script.js"></script>
+</body>
+</html>
