@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <a href="./trello.svg" alt="logoTrello">
+            <h1>
+                Trello
+            </h1>
+        </a>
+
+        <div class="menuDesplegable">
+            <ul>
+                <li>Configuración</li>
+                <li>Salir</li>
+            </ul>
+        </div>
+
+        <main>
+            <div class="registroForm">
+                <form>
+                    <h2>Iniciar Sesión</h2>
+
+                    <label>
+                        Correo:
+                        <br>
+                        <input type="email" class="campoEmail" id="campoEmail" required>
+                    </label>
+                    <label>
+                        Contraseña:
+                        <br>
+                        <input type="password" class="campoContraseña" id="campoContraseña" required>
+                    </label>
+
+                    <button type="submit">Iniciar Sesión</button>
+                    <p>Error</p>
+                </form>
+
+                <form>
+                    <h2>Registrarse</h2>
+
+                    <label>
+                        Nombre:
+                        <br>
+                        <input type="text" class="campoNombre" id="campoNombre" required>
+                    </label>
+                    <label>
+                        Apellido:
+                        <br>
+                        <input type="text" class="campoApellido" id="campoApellido" required>
+                    </label>
+                    <label>
+                        Edad:
+                        <br>
+                        <input type="number" class="campoEdad" id="campoEdad" required>
+                    </label>
+                    <label>
+                        Correo:
+                        <br>
+                        <input type="email" class="campoEmail" id="campoEmail" required>
+                    </label>
+                    <label>
+                        Contraseña:
+                        <br>
+                        <input type="password" class="campoContraseña" id="campoContraseña" required>
+                    </label>
+                    <label>
+                        Confirmar Contraseña:
+                        <br>
+                        <input type="password" class="campoEmail" id="campoEmail" required>
+                    </label>
+
+                    <button type="submit">Registrarse</button>
+                    <p>Error</p>
+                </form>
+
+                <form>
+                    <h2>Foto de Perfil</h2>
+
+                    <img src="./img/person-circle (1).svg" alt="user">
+
+                    <button type="button">Cambiar Foto</button>
+
+                    <div>
+                        <button type="button">Cancelar</button>
+                        <button type="button">Guardar</button>
+                    </div>
+                </form>
+
+
+
+
+            </div>
+        </main>
+    </header>
+    <script src="./index.js"></script>
+</body>
+
+</html>
